@@ -13,7 +13,7 @@ def create_app():
     # Routes determine location
     @app.route("/", methods=['GET'])
     def input():
-        return render_template('input.html', title='Input')
+        return render_template('search.html')
 
     @app.route("/output", methods=['POST'])
     def output():
@@ -33,7 +33,7 @@ def create_app():
 
         r_skills = re.sub('['+string.punctuation+']', '', result_df['skills'].iloc[0]).split()
 
-        return render_template('output.html',
+        return render_template('response.html',
                                title='Search Results',
                                r_title=r_title,
                                r_city=r_city,
@@ -42,4 +42,9 @@ def create_app():
                                r_hsalary=r_hsalary,
                                r_skills=r_skills
                                )
+
+    @app.route("/about")
+    def about():
+        return render_template('about.html')
+
     return app
