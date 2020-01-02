@@ -1,1 +1,1 @@
-web: gunicorn TEST:APP -t 120
+web: gunicorn TECHSEARCH:APP -t 120
