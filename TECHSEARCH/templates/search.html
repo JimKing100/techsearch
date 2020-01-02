@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="/static/css/style.css">
+
+  <!-- Favicon Images -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+  <link rel="manifest" href="/static/site.webmanifest">
+  <title>TechSearch | Research Your Next Job</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header-container flex">
+    <div class="logo">
+      <a href="/">
+        <img src="/static/images/logo.png" alt="TechSearch Logo">
+      </a>
+    </div>
+    <div class="navbar">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+    </div>
+  </header>
+  {% block content %}
+
+  <!-- Form -->
+  <div class="form-container flex">
+    <div class="form-text">
+      <h2>Research Your Next Job</h2>
+    </div>
+    <form action="/output" method="post">
+      <select name="title" id="titles">
+        <option value="" disabled selected>Pick a Job Title</option>
+        <option value="data scientist">Data Scientist</option>
+        <option value="web developer">Web Developer</option>
+        <option value="ux designer">UX Designer</option>
+        <option value="ios developer">iOS Developer</option>
+      </select>
+      <select name="city" id="cities">
+        <option value="" disabled selected>Select a City</option>
+        <option value="San Jose">San Jose, CA</option>
+        <option value="San Francisco">San Francisco, CA</option>
+        <option value="Seattle">Seattle, WA</option>
+        <option value="Washington">Washington, DC</option>
+        <option value="New York">New York, NY</option>
+        <option value="Baltimore">Baltimore, MD</option>
+        <option value="Boulder">Boulder, CO</option>
+        <option value="San Deigo">San Diego, CA</option>
+        <option value="Denver">Denver, CO</option>
+        <option value="Huntsville">Huntsville, AL</option>
+        <option value="Colorado Springs">Colorado Springs, CO</option>
+        <option value="Houston">Houston, TX</option>
+        <option value="Trenton">Trenton, NJ</option>
+        <option value="Dallas">Dallas, TX</option>
+        <option value="Columbus">Columbus, OH</option>
+        <option value="Austin">Austin, TX</option>
+        <option value="Philadelphia">Philadelphia, PA</option>
+        <option value="Durham">Durham, NC</option>
+        <option value="Raleigh">Raleigh, NC</option>
+        <option value="Alanta">Atlanta, GA</option>
+      </select>
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  {% endblock %}
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-nav">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+    </div>
+    <p>&copy; 2020 TechSearch</p>
+  </footer>
+</body>
+
+</html>
