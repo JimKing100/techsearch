@@ -1,0 +1,176 @@
+/* Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 62.5%;
+	font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Utilities */
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+a { text-decoration: none; }
+.flex { display: flex; }
+
+/* Navbar */
+.header-container {
+  justify-content: space-between;
+  align-items: center;
+  height: 18vh;
+  padding: 0 40px 0 20px;
+  background: #fff;
+}
+
+.header-container .logo img {
+  height: auto;
+  width: 180px;
+}
+
+.header-container .navbar a {
+  margin: 0px 20px;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+/* Call To Action */
+
+.cta {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+    rgba(53, 53, 53, 0.45), 
+    rgba(53, 53, 53, 0.45)
+  ),url(/images/cta-image.jpeg);
+  background-size: cover;
+  color: #fff;
+  height: 85vh;
+}
+
+.cta .cta-text {
+  margin-bottom: 50px;
+}
+
+.cta .cta-text h1 {
+  padding-bottom: 40px;
+}
+
+.cta .cta-text p {
+  font-size: 1.4rem;
+}
+
+.cta .btn a {
+  border: 1px solid #31c6e880;
+  background: #31c6e880;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 10px 30px;
+}
+
+/* Overview */
+.overview {
+  height: 60vh;
+  text-align: center;
+  background: #f2f2f2;
+  padding: 40px 20px;
+}
+
+.overview .overview-card-container {
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.overview .overview-card-container .card {
+  height: 250px; 
+  width: 350px; 
+  background: #fff;
+  margin: 0 10px;
+  padding: 30px 10px 0;
+  border-radius: 20px;
+}
+
+.overview .overview-card-container .card i {
+  color: #31C6E8;
+  font-size: 3rem;
+  padding-bottom: 20px;
+}
+
+.overview .overview-card-container .card h3 {
+  padding-bottom: 20px;
+}
+
+.overview .overview-card-container .card p {
+  padding: 0 10px;
+  font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+  height: 20vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #001021;
+  color: #FDFFFC;
+  font-size: 1.2rem;
+}
+
+footer p {
+  padding: 10px 0;
+}
+
+footer .footer-nav {
+  padding: 10px 0;
+}
+
+footer .footer-nav a {
+  color: #FDFFFC;
+  padding: 0 20px;
+}
