@@ -12,7 +12,7 @@ data - the preprocessed data
 
 preprocess - the preprocessing Jupyter notebooks
 
-- nlp.ipynb - The Natural Language Processing (NLP) module converting the raw scraped data into the top ten tech tokens.
+- nlp.ipynb - The Natural Language Processing (NLP) module converting the raw scraped data into the final dataframe.
 - scraper.ipynb - The Indeed.com scraping module used to scrape the raw job listings by job and city.
 
 configuration files - the files needed to set up and configure the proper environment
