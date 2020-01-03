@@ -142,8 +142,8 @@
   padding-bottom: 10px;
 }
 
-.results-card .salary p:last-child {
-  padding-left: 30px;
+.results-card .salary .p-title {
+  padding-right: 50px;
 }
 
 .results-card .keywords p {
