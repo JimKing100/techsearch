@@ -2,22 +2,33 @@
 {% block content %}
 
 <h1>Tech Job Search Results</h1>
-<ul>
-  <p> {{ r_title }} </p>
-  <p> {{ r_city }} </p>
-  <p> {{ r_count }} </p>
-  <p> {{ r_lsalary }} </p>
-  <p> {{ r_hsalary }} </p>
-  <li> {{ r_skills[0] }} </li>
-  <li> {{ r_skills[1] }} </li>
-  <li> {{ r_skills[2] }} </li>
-  <li> {{ r_skills[3] }} </li>
-  <li> {{ r_skills[4] }} </li>
-  <li> {{ r_skills[5] }} </li>
-  <li> {{ r_skills[6] }} </li>
-  <li> {{ r_skills[7] }} </li>
-  <li> {{ r_skills[8] }} </li>
-  <li> {{ r_skills[9] }} </li>
-</ul>
+<!-- Results -->
+  <div class="results-container">
+    <div class="results-card flex">
+      <div class="number-results">
+        <p>There are {{ r_count }} {{ r_title }} jobs in {{ r_city }}</p>
+      </div>
+      <div class="salary">
+        <p>Salary Range:</p>
+        <p>{{ r_lsalary }} - {{ r_hsalary }}</p>
+      </div>
+      <div class="keywords">
+        <p>Top Keywords:</p>
+        <ul>
+          <li> {{ r_skills[0] }} </li>
+          <li> {{ r_skills[1] }} </li>
+          <li> {{ r_skills[2] }} </li>
+          <li> {{ r_skills[3] }} </li>
+          <li> {{ r_skills[4] }} </li>
+          <li> {{ r_skills[5] }} </li>
+          <li> {{ r_skills[6] }} </li>
+          <li> {{ r_skills[7] }} </li>
+          <li> {{ r_skills[8] }} </li>
+          <li> {{ r_skills[9] }} </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
 
 {% endblock %}

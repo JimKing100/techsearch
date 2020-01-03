@@ -9,6 +9,7 @@
 
   <!-- CSS Files -->
   <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/search.css">
 
   <!-- Favicon Images -->
   <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
@@ -28,6 +29,7 @@
     </div>
     <div class="navbar">
       <a href="/">Home</a>
+      <a href="/search">Search</a>
       <a href="/about">About</a>
     </div>
   </header>
@@ -75,12 +77,22 @@
 
   {% endblock %}
 
+  <!-- Results -->
+  <div class="results-container flex">
+    <h2>Search Above to See Results</h2>
+    <img class="image" src="/static/images/logo-image.png" alt="TechSearch Logo">
   </div>
 
   <!-- Footer -->
   <footer>
+    <div class="logo">
+      <a href="/">
+        <img src="/static/images/logo.png" alt="TechSearch Logo">
+      </a>
+    </div>
     <div class="footer-nav">
       <a href="/">Home</a>
+      <a href="/search.html">Search</a>
       <a href="/about">About</a>
     </div>
     <p>&copy; 2020 TechSearch</p>
