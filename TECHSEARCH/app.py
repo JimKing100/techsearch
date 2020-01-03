@@ -11,19 +11,21 @@ def create_app():
     app = Flask(__name__)
 
     # Routes determine location
-    @app.route("/", methods=['GET'])
+    @app.route("/")
+    def home():
+        return render_template('index.html')
+
+    @app.route("/search", methods=['GET'])
     def input():
         return render_template('search.html')
 
     @app.route("/output", methods=['POST'])
     def output():
-        df = pd.read_csv('https://raw.githubusercontent.com/JimKing100/techsearch/master/data/scrape_results.csv')
+        df = pd.read_csv('https://raw.githubusercontent.com/JimKing100/techsearch/master/data/scrape_results1.csv')
         df = df.drop(df.columns[0], axis=1)
 
         title = request.values['title']
         city = request.values['city']
-        # title = 'data scientist'
-        # city = 'San Francisco'
         result_df = df.loc[(df['job'] == title) & (df['city'] == city)]
         r_title = result_df['job'].iloc[0]
         r_city = result_df['city'].iloc[0]
