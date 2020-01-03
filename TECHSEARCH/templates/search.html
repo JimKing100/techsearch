@@ -8,14 +8,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- CSS Files -->
-  <link rel="stylesheet" href="/static/css/style.css">
-  <link rel="stylesheet" href="/static/css/search.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/search.css') }}">
 
   <!-- Favicon Images -->
   <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
   <link rel="manifest" href="/static/site.webmanifest">
+
   <title>TechSearch | Research Your Next Job</title>
 </head>
 
@@ -28,75 +29,74 @@
       </a>
     </div>
     <div class="navbar">
-      <a href="/">Home</a>
-      <a href="/search">Search</a>
-      <a href="/about">About</a>
+      <a class="hover" href="/">Home</a>
+      <a class="hover" href="/search">Search</a>
+      <a class="hover" href="/about">About</a>
     </div>
   </header>
   {% block content %}
 
   <!-- Form -->
-  <div class="form-container flex">
-    <div class="form-text">
-      <h2>Research Your Next Job</h2>
+  <div class="form-section">
+    <h2>Research Your Next Job</h2>
+    <div class="form-container">
+      <form action="/output" method="post">
+        <select class="dropdown" name="title" id="titles">
+          <option value="" disabled selected>Pick a Job Title</option>
+          <option value="data scientist">Data Scientist</option>
+          <option value="web developer">Web Developer</option>
+          <option value="ux designer">UX Designer</option>
+          <option value="ios developer">iOS Developer</option>
+        </select>
+        <select class="dropdown" name="city" id="cities">
+          <option value="" disabled selected>Select a City</option>
+          <option value="San Jose">San Jose, CA</option>
+          <option value="San Francisco">San Francisco, CA</option>
+          <option value="Seattle">Seattle, WA</option>
+          <option value="Washington">Washington, DC</option>
+          <option value="New York">New York, NY</option>
+          <option value="Baltimore">Baltimore, MD</option>
+          <option value="Boulder">Boulder, CO</option>
+          <option value="San Diego">San Diego, CA</option>
+          <option value="Denver">Denver, CO</option>
+          <option value="Huntsville">Huntsville, AL</option>
+          <option value="Colorado Springs">Colorado Springs, CO</option>
+          <option value="Houston">Houston, TX</option>
+          <option value="Trenton">Trenton, NJ</option>
+          <option value="Dallas">Dallas, TX</option>
+          <option value="Columbus">Columbus, OH</option>
+          <option value="Austin">Austin, TX</option>
+          <option value="Philadelphia">Philadelphia, PA</option>
+          <option value="Durham">Durham, NC</option>
+          <option value="Raleigh">Raleigh, NC</option>
+          <option value="Alanta">Atlanta, GA</option>
+        </select>
+        <button type="submit" class="submit hover">Search</button>
+      </form>
     </div>
-    <form action="/output" method="post">
-      <select name="title" id="titles">
-        <option value="" disabled selected>Pick a Job Title</option>
-        <option value="data scientist">Data Scientist</option>
-        <option value="web developer">Web Developer</option>
-        <option value="ux designer">UX Designer</option>
-        <option value="ios developer">iOS Developer</option>
-      </select>
-      <select name="city" id="cities">
-        <option value="" disabled selected>Select a City</option>
-        <option value="San Jose">San Jose, CA</option>
-        <option value="San Francisco">San Francisco, CA</option>
-        <option value="Seattle">Seattle, WA</option>
-        <option value="Washington">Washington, DC</option>
-        <option value="New York">New York, NY</option>
-        <option value="Baltimore">Baltimore, MD</option>
-        <option value="Boulder">Boulder, CO</option>
-        <option value="San Deigo">San Diego, CA</option>
-        <option value="Denver">Denver, CO</option>
-        <option value="Huntsville">Huntsville, AL</option>
-        <option value="Colorado Springs">Colorado Springs, CO</option>
-        <option value="Houston">Houston, TX</option>
-        <option value="Trenton">Trenton, NJ</option>
-        <option value="Dallas">Dallas, TX</option>
-        <option value="Columbus">Columbus, OH</option>
-        <option value="Austin">Austin, TX</option>
-        <option value="Philadelphia">Philadelphia, PA</option>
-        <option value="Durham">Durham, NC</option>
-        <option value="Raleigh">Raleigh, NC</option>
-        <option value="Alanta">Atlanta, GA</option>
-      </select>
-      <button type="submit">Search</button>
-    </form>
   </div>
 
   {% endblock %}
 
   <!-- Results -->
-  <div class="results-container flex">
-    <h2>Search Above to See Results</h2>
+  <div class="pre-results-container flex">
+    <h3>Search for Results Above</h3>
     <img class="image" src="/static/images/logo-image.png" alt="TechSearch Logo">
   </div>
 
   <!-- Footer -->
-  <footer>
-    <div class="logo">
-      <a href="/">
-        <img src="/static/images/logo.png" alt="TechSearch Logo">
-      </a>
-    </div>
+  <footer class="flex">
+    <img src="/static/images/logo-image.png" alt="TechSearch Logo">
     <div class="footer-nav">
-      <a href="/">Home</a>
-      <a href="/search.html">Search</a>
-      <a href="/about">About</a>
+      <a class="hover" href="/">Home</a>
+      <a class="hover" href="/search">Search</a>
+      <a class="hover" href="/about">About</a>
     </div>
     <p>&copy; 2020 TechSearch</p>
   </footer>
+
+  <!-- JavaScript Files -->
+  <script src="{{url_for('static', filename='js/click.js')}}"></script>
 </body>
 
 </html>

@@ -8,7 +8,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- CSS Files -->
-  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
 
   <!-- Favicon Images -->
   <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
@@ -27,23 +28,94 @@
       </a>
     </div>
     <div class="navbar">
-      <a href="/">Home</a>
-      <a href="/search">Search</a>
-      <a href="/about">About</a>
+      <a class="hover" href="/">Home</a>
+      <a class="hover" href="/search">Search</a>
+      <a class="hover" href="/about">About</a>
     </div>
   </header>
 
-  <!-- Footer -->
-  <footer>
-    <div class="logo">
-      <a href="/">
-        <img src="static/images/logo.png" alt="TechSearch Logo">
-      </a>
+  <!-- About Section -->
+  <div class="about-container flex">
+    <div class="about-image">
+      <img src="/static/images/about-image.jpeg" alt="About">
     </div>
+    <div class="about-content">
+      <h3>About TechSearch</h3>
+      <p>The Tech Job Web Search uses job listings scraped from Indeed.com on January 2, 2020 to provide a summary of
+        the total number of jobs, the average salary range and the top 10 technical skills for four broad tech positions
+        in the top 20 tech cities in the U.S.</p>
+      <p>The four broad tech positions – Data Scientist, Web Developer, UX Designer
+        and iOS Developer – actually include all positions related to that job title. So,a Web Developer includes Web
+        Developer, Front End Engineer, PHP Developer and many other titles deemed by Indeed.com to be Web
+        Developer-related positions.</p>
+      <p>The top 20 tech cities were determined by calculating the top 20 metro areas(MSAs)
+        in the U.S. based on the highest average mean wage for computer and mathematical occupations. The Indeed.com
+        search takes a 25 mile radius from the city, so the results include surrounding areas of the cities.</p>
+    </div>
+  </div>
+
+  <!-- How it Works -->
+  <div class="how-it-works">
+    <h3>How the App Works</h3>
+    <p>While the Web app is very simple to use, it required significant data science behind the scenes to construct the
+      summary results.</p>
+    <ol>
+      <li>Web Site Scraping – Code was created to scrape the data from the Indeed.com web site.</li>
+      <li>Natural Language Processing (NLP) – The raw results from the web scraping were then processed using NLP. </li>
+      <ul>
+        <li>The job description field – a large body of text – was tokenized.</li>
+        <li>The stop words were removed.</li>
+        <li>The tokens were lemmatized to create the base tokens.</li>
+        <li>The base tokens were then run through a tech word dictionary of about 100 key tech terms to reduce the
+          tokens to the key tech terms.
+        </li>
+        <li>The key tokens were counted and ranked.</li>
+      </ul>
+      <li>Final Dataframe – A summary dataframe was created for storing the final summary data.</li>
+      <ul>
+        <li>The low and high average salaries were calculated.</li>
+        <li>A list of the top ten key tokens was created.</li>
+        <li>The final dataframe was output to a file to be used in the flask app.</li>
+      </ul>
+    </ol>
+  </div>
+
+  <!-- Team Section -->
+  <div class="team-section">
+    <h3>Meet The Team</h3>
+    <p>The Tech Job Search Web app was created by Jim King and Brandon Franks. Jim King handled the data science and
+      Flask application while Brandon Franks designed the user interface and handled the web development work.</p>
+    <hr>
+    <div class="team-container flex">
+      <div class="team-card flex">
+        <div class="card-img">
+          <img src="https://ca.slack-edge.com/T4JUEB3ME-UJE6EM5AS-73bfda4d095d-512" alt="Jim King">
+        </div>
+        <div class="card-content">
+          <h4>Jim King</h4>
+          <p>Project Manager</p>
+          <p>Data Scientist</p>
+        </div>
+      </div>
+      <div class="team-card flex">
+        <div class="card-img">
+          <img src="https://ca.slack-edge.com/T4JUEB3ME-UMJGDNUTB-906d6378fefc-512" alt="Brandon Franks">
+        </div>
+        <div class="card-content">
+          <h4>Brandon Franks</h4>
+          <p>Front-End Developer</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="flex">
+    <img src="/static/images/logo-image.png" alt="TechSearch Logo">
     <div class="footer-nav">
-      <a href="/">Home</a>
-      <a href="/search">Search</a>
-      <a href="/about">About</a>
+      <a class="hover" href="/">Home</a>
+      <a class="hover" href="/search">Search</a>
+      <a class="hover" href="/about">About</a>
     </div>
     <p>&copy; 2020 TechSearch</p>
   </footer>

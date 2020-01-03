@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- CSS Files -->
-  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -33,9 +33,9 @@
       </a>
     </div>
     <div class="navbar">
-      <a href="/">Home</a>
-      <a href="/search">Search</a>
-      <a href="/about">About</a>
+      <a class="hover" href="/">Home</a>
+      <a class="hover" href="/search">Search</a>
+      <a class="hover" href="/about">About</a>
     </div>
   </header>
 
@@ -46,7 +46,7 @@
       <p>Research tech jobs in the hottest tech cities</p>
     </div>
     <div class="btn">
-      <a href="/search">Research a Job</a>
+      <a class="hover" href="/search">Research a Job</a>
     </div>
   </div>
 
@@ -78,9 +78,9 @@
   <footer class="flex">
     <img src="/static/images/logo-image.png" alt="TechSearch Logo">
     <div class="footer-nav">
-      <a href="/">Home</a>
-      <a href="/search">Search</a>
-      <a href="/about">About</a>
+      <a class="hover" href="/">Home</a>
+      <a class="hover" href="/search">Search</a>
+      <a class="hover" href="/about">About</a>
     </div>
     <p>&copy; 2020 TechSearch</p>
   </footer>
