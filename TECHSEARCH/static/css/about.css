@@ -1,0 +1,131 @@
+/* About Section */
+.about-container {
+  background: #f3f3f3;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+
+.about-container .about-image {
+  height: 100%;
+  width: 145%;
+}
+
+.about-container .about-image img {
+ width: 100%;
+ height: 100%;
+}
+
+.about-container .about-content {
+  text-align: center;
+  width: 100%;
+  padding: 0 60px;
+  line-height: 1.5rem;
+}
+
+.about-container .about-content h3 {
+  padding-bottom: 40px;
+}
+
+.about-container .about-content p {
+  font-size: 1.1rem;
+  padding: 10px 0;
+}
+
+/* How It Works */
+.how-it-works {
+  text-align: center;
+  font-size: 1.2rem;
+  background: linear-gradient(
+    rgba(17, 17, 17, 0.75), 
+    rgba(17, 17, 17, 0.75)
+  ), url('/static/images/skyline.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #FDFFFC;
+  padding:0 250px 50px;
+  line-height: 1.3rem;
+}
+
+.how-it-works h3 {
+  padding: 50px 0;
+}
+
+.how-it-works p {
+  padding-bottom: 30px;
+}
+
+.how-it-works ol {
+  list-style: decimal;
+  padding-bottom: 10px;
+}
+
+.how-it-works ul {
+  list-style: lower-alpha;
+  padding-left: 50px;
+  padding-bottom: 10px;
+}
+
+.how-it-works li {
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+/* Team Section */
+.team-section {
+  padding: 50px 50px;
+  background: #31c6e8;
+  text-align: center;
+  height: 45vh;
+}
+
+.team-section h3 {
+  padding-bottom: 20px;
+}
+
+.team-section p {
+  font-size: 1.2rem;
+  padding: 0 140px 20px;
+  line-height: 1.4rem;
+}
+
+hr {
+  border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    margin-bottom: 30px;
+}
+
+.team-container {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.team-container .team-card {
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid #fff;
+  width: 40%;
+  height: 150px;
+  background: #FDFFFC;
+  border-radius: 20px;
+}
+
+.team-container .team-card .card-img img {
+ width: 120px;
+ height: 120px;
+ border-radius: 50%;
+ margin-left: 30px;
+}
+
+.team-container .team-card .card-content h4 {
+ font-size: 1.5rem;
+ padding-bottom: 10px;
+}
+
+.team-container .team-card .card-content p {
+  font-size: 1.1rem;
+  padding-bottom: 5px;
+}

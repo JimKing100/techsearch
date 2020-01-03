@@ -31,7 +31,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
+  font-family: 'Roboto', sans-serif;
 }
 ol, ul {
 	list-style: none;
@@ -55,6 +56,7 @@ h2 { font-size: 2.5rem; }
 h3 { font-size: 2rem; }
 a { text-decoration: none; }
 .flex { display: flex; }
+.hover { transition: .4s; }
 
 /* Navbar */
 .header-container {
@@ -70,10 +72,15 @@ a { text-decoration: none; }
   width: 180px;
 }
 
-.header-container .navbar a {
+.header-container .navbar .hover {
   margin: 0px 20px;
   font-size: 1.3rem;
   color: #333;
+}
+
+.header-container .navbar .hover:hover {
+  font-size: 1.4rem;
+  color: #777;
 }
 
 /* Call To Action */
@@ -86,7 +93,10 @@ a { text-decoration: none; }
   background: linear-gradient(
     rgba(53, 53, 53, 0.45), 
     rgba(53, 53, 53, 0.45)
-  ),url(/images/cta-image.jpeg);
+  ),url(https://images.pexels.com/photos/316093/pexels-photo-316093.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   color: #fff;
   height: 85vh;
@@ -111,6 +121,14 @@ a { text-decoration: none; }
   color: #fff;
   font-size: 1.6rem;
   padding: 10px 30px;
+}
+
+.cta .btn a:hover {
+  font-size: 1.65rem;
+  padding: 11px 32px;
+  background: #1f768a80;
+  border: 1px solid #1f768a80;
+  color: #f3f3f3;
 }
 
 /* Overview */
@@ -153,13 +171,18 @@ a { text-decoration: none; }
 
 /* Footer */
 footer {
-  height: 20vh;
+  height: 22vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #001021;
   color: #FDFFFC;
   font-size: 1.2rem;
+}
+
+footer img {
+  height: 50px;
+  width: auto;
 }
 
 footer p {
@@ -173,4 +196,10 @@ footer .footer-nav {
 footer .footer-nav a {
   color: #FDFFFC;
   padding: 0 20px;
+}
+
+footer .footer-nav a:hover {
+  font-size: 1.3rem;
+  padding: 0 22px;
+  color: #d6d5d5;
 }
