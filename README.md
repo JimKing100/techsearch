@@ -1,5 +1,5 @@
 # techsearch
-Winter Hackathon - Tech Job Search
+Winter Hackathon Project, Jim King and Brandon Franks - Tech Job Search Wen Application
 
 The contents include the following:
 
